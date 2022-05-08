@@ -74,18 +74,19 @@ It then transforms and loads the data into the five tables of the sparkifydb dat
 
 #### Loading the Data and Running ETL Pipeline
 
-All the code I wrote in `etl.ipynb` I then used to complete `etl.py`, which reads and processes all the files from the song_data and log_data directories, and loads them into the sparkifydb database tables.
+The codes are first written in `etl.ipynb` file and then used to complete `etl.py`.
+The `etl.py`reads and processes all the files from the song_data and log_data directories, and loads them into the sparkifydb database tables.
 
 The steps to run the pipeline are as follows:
 
 1. In a terminal, run `python create_tables.py` to reset the tables in the sparkifydb database.
-2. Running `test.ipynb` (in a jupyter notebook) confirms that the tables were successfully created with the correct columns.
+2. Running `test.ipynb` (in a jupyter notebook or jupyter lab) confirms that the tables were successfully created with the correct columns.
 3. In a terminal, run `python etl.py` to process all the datasets.
 4. Again, running `test.ipynb` confirms that the records were successfully inserted into each table.
 
 #### Sample Queries
 
 Get the number of paid and free plans by gender: <br>
-`%sql SELECT count(users.user_id), users.level, users.gender FROM users GROUP BY users.level, users.gender`
+`%sql SELECT count(user_id), level, gender FROM users GROUP BY level, gender`
 
 ![](img/sql_query.png)
