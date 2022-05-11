@@ -77,12 +77,15 @@ It then transforms and loads the data into the five tables of the sparkifydb dat
 The codes are first written in `etl.ipynb` file and then used to complete `etl.py`.
 The `etl.py`reads and processes all the files from the song_data and log_data directories, and loads them into the sparkifydb database tables.
 
-The steps to run the pipeline are as follows:
+### The steps to run the pipeline:
 
-1. In a terminal, run `python create_tables.py` to reset the tables in the sparkifydb database.
-2. Running `test.ipynb` (in a jupyter notebook or jupyter lab) confirms that the tables were successfully created with the correct columns.
-3. In a terminal, run `python etl.py` to process all the datasets.
-4. Again, running `test.ipynb` confirms that the records were successfully inserted into each table.
+1. In a terminal, run `sql_queries` to get the queries for the tables.
+2. In a terminal, run `python create_tables.py` to reset the tables in the sparkifydb database.
+3. Running `test.ipynb` (in a jupyter notebook or jupyter lab) confirms that the tables were successfully created with the correct columns.
+4. Running `etl.ipynb` (in a jupyter notebook or jupyter lab) runs the ETL pipeline for each table.
+5. In a terminal, run `python etl.py` to process all the datasets.
+6. Again, running `test.ipynb` confirms that the records were successfully inserted into each table.
+
 
 #### Sample Queries
 
